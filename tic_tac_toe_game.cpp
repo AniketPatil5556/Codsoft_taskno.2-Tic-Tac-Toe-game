@@ -5,12 +5,12 @@ std::vector<std::vector<char> > board(BOARD_SIZE, std::vector<char>(BOARD_SIZE, 
 void printBoard()
 {
     for (int row = 0; row < BOARD_SIZE; ++row)
-	 {
+        {
         for (int col = 0; col < BOARD_SIZE; ++col)
-		 {
+           {
             std::cout << board[row][col];
             if (col < BOARD_SIZE - 1)
-			 {
+	    {
                 std::cout << " | ";
             }
         }
@@ -94,9 +94,10 @@ int main()
 			{
                 gameWon = true;
                 break;
-            } else if (isBoardFull()) 
-			{
-                break; // Draw
+            }
+	    else if (isBoardFull()) 
+	    {
+                break; 
             }
 
             currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
